@@ -9,15 +9,24 @@ angular.module("phoneList").component("phoneList", {
       {
         name: "Nexus S",
         snippet: "Fast just got faster with Nexus S.",
+        age: 1,
       },
       {
         name: "Motorola XOOM™ with Wi-Fi",
         snippet: "The Next, Next Generation tablet.",
+        age: 2,
       },
       {
         name: "MOTOROLA XOOM™",
         snippet: "The Next, Next Generation tablet.",
+        age: 3,
+      },
+      {
+        name: "Apple iphone 16™",
+        snippet: "Built for Apple Intelligence. Camera Control. 48MP Fusion camera. Five vibrant colors. A18 chip.",
+        age: 2,
       },
     ];
+    this.orderProp = "age";
   },
 });
