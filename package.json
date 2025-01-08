@@ -1,0 +1,29 @@
+{
+  "name": "tutorial-angular1-app",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A tutorial application for AngularJS",
+  "repository": "https://github.com/amirmahboubi/tutorial-angular1-app",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.8.x",
+    "angular-route": "1.8.x",
+    "bootstrap": "5.3.x"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "postinstall": "npm run copy-libs",
+    "update-deps": "npm update",
+    "postupdate-deps": "npm run copy-libs",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist}/**/*\" app/lib -C",
+    "prestart": "npm install",
+    "start": "http-server ./app -a localhost -p 8000 -c-1",
+    "pretest": "npm install",
+    "test-single-run": "npm test -- --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update"
+  }
+}
