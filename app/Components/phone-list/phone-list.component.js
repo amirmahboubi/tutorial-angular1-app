@@ -8,9 +8,9 @@ angular.module("phoneList").component("phoneList", {
     "$http",
     function PhoneListController($http) {
       var self = this;
+
       $http.get("Data/phones/phones.json").then(function (response) {
         self.phones = response.data;
-
         //pre-process the HTTP response by limiting the number of phones to the first 5 in the list.
         //self.phones = response.data.slice(0, 5);
       });
